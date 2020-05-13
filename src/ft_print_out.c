@@ -1,3 +1,5 @@
+#include "lem_in.h"
+
 void        ft_print(t_list *list)
 {
     char    *str;
@@ -29,7 +31,14 @@ char        *ft_ant_link(char *id, char *name)
     return (s);
 }
 
+void        ft_error()
+{
+    ft_putendl("ERROR");
+    return ;
+}
+
 void        ft_print_out(t_list *value, t_list *points)
 {
+
     return ;
 }
