@@ -26,7 +26,35 @@ void        ft_free_room(void *data)
     return ;
 }
 
+void        ft_clear(t_list **list, void (*clr)(void *))
+{
+    if (*list == NULL)
+        return ;
+    (*clr)((*list)->content);
+    ft_memdel((void**)list);
+    return ;
+}
+
+void        ft_free_list(t_list **list, void (*clr)(void *))
+{
+    t_list  *ptr;
+
+    if(*list == NULL)
+        return ;
+    while (*list != NULL)
+    {
+        ptr = (*list)->next;
+        f_clear(list, clr);
+        *list = ptr;
+    }
+    return ;
+}
+
 void        ft_free_farm(t_farm *data)
 {
+    ft_free_list(&(data->rooms), ft_free_room);
+    ft_free_list(&(data->ants), ft_free);
+    ft_free_list(&(data->links), ft_free);
+    ft_free_list(&(data->turns), ft_free);
     return ;
 }
