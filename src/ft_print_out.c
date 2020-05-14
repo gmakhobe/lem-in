@@ -39,6 +39,8 @@ void        ft_error()
 
 void        ft_print_out(t_list *value, t_list *points)
 {
-
+    ft_print_list(value, ft_print);
+    ft_putchar('\n');
+    ft_print_list(points, ft_print_point);
     return ;
 }
