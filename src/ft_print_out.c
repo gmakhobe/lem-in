@@ -31,13 +31,13 @@ char        *ft_ant_link(char *id, char *name)
 {
     char    *str;
     char    *s;
-    char    *link;
+    char    *house;
 
-    link = ft_strjoin("-", name);
-    str = ft_strjoin(id, link);
+    house = ft_strjoin("-", name);
+    str = ft_strjoin(id, house);
     s = ft_strjoin("L", str);
     free(str);
-    free(link);
+    free(house);
     return (s);
 }
 
