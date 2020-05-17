@@ -6,7 +6,7 @@ void        ft_print(t_list *list)
 
     str = (char*)list->content;
     ft_putstr(str);
-    (str[0] != '\n')
+    if(str[0] != '\n')
         ft_putchar('\n');
     return ;
 }
@@ -14,9 +14,15 @@ void        ft_print(t_list *list)
 void        ft_print_point(t_list *list)
 {
     t_turn  *point;
+    char    *str;
+    char    *id;
 
     point = (t_turn*)list->content;
-    ft_putstr(ft_ant_link(ft_itoa(point->ant->id), point->room->name));
+    id = ft_itoa(point->ant->id);
+    str = ft_ant_link(id, point->room->name);
+    ft_putstr(str);
+    free(id);
+    free(str);
     (point->last_move)? ft_putchar('\n') : ft_putchar(' ');
     return ;
 }
@@ -25,9 +31,13 @@ char        *ft_ant_link(char *id, char *name)
 {
     char    *str;
     char    *s;
+    char    *link;
 
-    str = ft_strjoin(id, ft_strjoin("-", name));
+    link = ft_strjoin("-", name);
+    str = ft_strjoin(id, link);
     s = ft_strjoin("L", str);
+    free(str);
+    free(link);
     return (s);
 }
 

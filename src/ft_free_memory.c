@@ -44,7 +44,7 @@ void        ft_free_list(t_list **list, void (*clr)(void *))
     while (*list != NULL)
     {
         ptr = (*list)->next;
-        f_clear(list, clr);
+        ft_clear(list, clr);
         *list = ptr;
     }
     return ;
