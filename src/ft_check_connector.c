@@ -7,10 +7,7 @@ int    ft_check_connector(t_list **input) //is_link
 	link = ft_strsplit((char*)(input->content), '-');
 	if (!input || !link)
 		return (0);
-	connector_size = get_table_size(link);
+	connector_size = ft_board_size(link);
 	ft_clear_data(link);
 	if (connector_size < 2) ? return (0) : return (1);
 }
-
-
-
