@@ -18,9 +18,7 @@ int analyze_map_data(t_list **input, t_farm *map)
 		return (0);
 	if (!resolve_rooms(&data, map))
 	 	return (0);
-	// if (!parse_links(&data, map))
-	// 	return (0);
-	// return (1);
-
-	///slimys code 
+	if (!ft_read_connections(&data, map))
+	 	return (0);
+	return (1);
 }
