@@ -1,29 +1,23 @@
 #include "../includes/lem_in.h"
 
-void        ft_free(void *data)
+void        ft_free(void *el, size_t el_size)
 {
-    if (data == NULL)
-        return ;
-    free(data);
-    return ;
+    if (!el)
+		return ;
+	free(el);
+	(void)el_size;
 }
 
-void        ft_free_room(void *data)
+void        ft_free_room(void *content, size_t content_size)
 {
-    t_room  *ptr;
+    t_room	*room;
 
-    if (data == NULL)
-        return ;
-    else
-    {
-        ptr = (t_room*)data;
-        if (ptr->name != NULL)
-        {
-            ft_free(ptr->name);
-        }
-        free(data);
-    }
-    return ;
+	if (!content)
+		return ;
+	room = (t_room*)content;
+	if (room->name)
+		ft_free(room->name, content_size);
+	free(content);
 }
 
 void        ft_clear(t_list **list, void (*clr)(void *))
@@ -35,7 +29,7 @@ void        ft_clear(t_list **list, void (*clr)(void *))
     return ;
 }
 
-void        ft_free_list(t_list **list, void (*clr)(void *))
+void        ft_free_list(t_list **list, void (*clr)(void *, size_t))
 {
     t_list  *ptr;
 

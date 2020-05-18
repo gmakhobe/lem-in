@@ -17,12 +17,12 @@ int		is_link(t_list *data)
 	size_t	size;
 	char	**link;
 
-	if (!input)
+	if (!data)
 		return (0);
 	if (!(link = ft_strsplit((char*)(data->content), '-')))
 		return (0);
-	size = get_table_size(link);
-	ft_strdel_table(link);
+	size = ft_board_size(link);
+	ft_clear_data(link);
 	if (size < 2)
 		return (0);
 	return (1);

@@ -1,4 +1,4 @@
-#include "lem_in.c"
+#include "../includes/lem_in.h"
 
 void    ft_clear_data(char **data) //ft_strdel_table
 {

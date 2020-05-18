@@ -16,7 +16,7 @@ int		resolve_rooms(t_list **data, t_farm *f)
 {
 	while (*data)
 	{
-		if (ignore_comments(data) || cmd(data))
+		if (ignore_comments(data) || ignore_commands(data))
 			continue ;
 		if (!resolve_room(data, f))
 			return (0);

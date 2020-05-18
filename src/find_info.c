@@ -28,7 +28,7 @@ int     find_info(t_farm *f, t_room *r)
 {
     t_list *s;
 
-    s = farm->s;
+    s = f->rooms;
     while (s)
     {
         if (is_info_same((t_room*)(s->content), r))

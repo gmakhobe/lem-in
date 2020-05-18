@@ -84,7 +84,7 @@ int ft_connections_to_the_rooms(t_list *input, t_farm *farm, t_room **from, t_ro
 t_room *ft_room_name(t_list *rooms, char *name);
 void ft_clear_data(char **data);
 size_t ft_board_size(char **board);
-int ft_check_connector(t_list **input);
+t_link *ft_resolve_connection(t_room *from, t_room *to);
 
 int find_path(t_farm *farm);
 t_list *run_a_dijkstra(t_farm *farm);
@@ -104,8 +104,12 @@ void ft_print_point(t_list *list);
 void ft_print(t_list *list);
 void ft_print_list(t_list *list, void (*fn)(t_list *));
 void ft_free_farm(t_farm *data);
-void ft_free_list(t_list **list, void (*clr)(void *));
+void ft_free_list(t_list **list, void (*clr)(void *, size_t));
 void ft_clear(t_list **list, void (*clr)(void *));
-void ft_free_room(void *data);
-void ft_free(void *data);
+void ft_free_room(void *content, size_t content_size);
+void ft_free(void *el, size_t el_size);
+
+void ft_remove_list(t_list **alst, void *content, int (*cmp)());
+t_list *ft_lstcpy(void *content, size_t content_size);
+size_t get_listsize(t_list *lst);
 #endif

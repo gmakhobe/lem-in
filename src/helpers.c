@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../includes/lem_in.h"
 
 void	ft_struct_del(void *node, size_t node_size)
 {

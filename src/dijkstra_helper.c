@@ -32,13 +32,13 @@ t_room	*get_closest_node(t_list *rooms)
 
 	node = (t_room*)(rooms->content);
 	rooms = rooms->next;
-    min_dist = room->dist;
+    min_dist = node->dist;
 	while (rooms)
 	{
 		if (min_dist > ((t_room*)(rooms->content))->dist)
 		{
 			node = (t_room*)(rooms->content);
-			min_dist = room->dist;
+			min_dist = node->dist;
 		}
 		rooms = rooms->next;
 	}
@@ -55,7 +55,7 @@ t_list	*get_room_list(t_farm *farm)
 	list = farm->rooms;
 	while (list)
 	{
-		if (!(temp = ft_lstcpy(lst->content, sizeof(t_room))))
+		if (!(temp = ft_lstcpy(list->content, sizeof(t_room))))
 		{
 			ft_lstdel(&room_list, NULL);
 			return (NULL);

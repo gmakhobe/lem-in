@@ -13,6 +13,7 @@ int     find_path(t_farm *farm)
         if (!set_path(farm, path, &i))
 			break ;
 	ft_lstdel(&path, NULL);
+    ft_putendl("Works");
     if (i == farm->n_ants)
 	    return (1);
     else

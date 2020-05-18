@@ -20,9 +20,9 @@ t_list			*run_a_dijkstra(t_farm *farm)
 			return (NULL);
 		}
 		ft_lstadd(&path, list);
-		node = room->prev;
+		node = node->prev;
 	}
-	if (ft_lstsize(path) < limit)
+	if (get_listsize(path) < limit)
 		ft_lstdel(&path, NULL);
 	return (path);
 }

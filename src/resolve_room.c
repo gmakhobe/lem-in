@@ -18,7 +18,7 @@ static int      add_rooms(t_room *r, t_farm *f)
 
     if (!(n = ft_lstcpy(r, sizeof(t_room))))
     {
-        free_room(r, sizeof(t_room));
+        ft_free(r, sizeof(t_room));
         return (0);
     }
     ft_lstappend(&(f->rooms), n);

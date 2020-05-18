@@ -66,7 +66,9 @@ static int	set_name(char *str, t_room *r)
 t_room		*resolve_info(char *str)
 {
 	t_room	*r;
+	int		max;
 
+	max = 2147483647 - 1;
 	if (!(r = (t_room*)malloc(sizeof(t_room))))
 		return (NULL);
 	if (!set_coordinates(str, r) || !set_name(str, r) ||
@@ -76,8 +78,8 @@ t_room		*resolve_info(char *str)
 		free(r);
 		return (NULL);
 	}
-	r->dist = INT_MAX - 1;
+	r->dist = max;
 	r->available = 1;
 	r->prev = NULL;
-	return (room);
+	return (r);
 }
