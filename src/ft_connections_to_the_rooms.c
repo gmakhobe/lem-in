@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_connections_to_the_rooms.c                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmakhobe <gmakhobe@student.wethinkcode.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/18 21:33:07 by gmakhobe          #+#    #+#             */
+/*   Updated: 2020/05/18 21:33:33 by gmakhobe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/lem_in.h"
 
-//connections to the rooms
 int		ft_connections_to_the_rooms(t_list *input, t_farm *farm,
-							t_room **from, t_room **to) //set_links_rooms function
+							t_room **from, t_room **to)
 {
 	char	**connector;
 
