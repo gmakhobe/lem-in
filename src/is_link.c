@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int		is_link(t_list *data)
 {

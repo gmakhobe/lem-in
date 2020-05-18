@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 //check the size of the link
 int    ft_check_connector(t_list **input) //is_link

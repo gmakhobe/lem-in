@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 size_t		ft_board_size(char **board)//get_table_size
 {

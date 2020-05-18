@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 //we check if the rooms don't contain the same information.
 static int	is_info_same(t_room *rm1, t_room *rm2)

@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int     find_path(t_farm *farm)
 {

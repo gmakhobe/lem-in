@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 t_link	*ft_resolve_connection(t_room *from, t_room *to) //get link
 {

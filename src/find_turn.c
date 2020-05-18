@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 t_list	*find_turn(t_ant *ant, t_room *room)
 {

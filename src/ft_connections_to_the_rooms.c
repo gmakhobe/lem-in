@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 //connections to the rooms
 int		ft_connections_to_the_rooms(t_list *input, t_farm *farm,

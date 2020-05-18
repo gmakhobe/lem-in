@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int analyze_map_data(t_list **input, t_farm *map)
 {

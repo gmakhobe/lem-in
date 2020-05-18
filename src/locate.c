@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int		locate(t_ant *ant, t_farm *farm, t_list *path)
 {

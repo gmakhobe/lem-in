@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int			read_map(const int fd, char **data, char c)
 {

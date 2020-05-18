@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 void		mod_nodes_dist(t_farm *farm, t_room *room)
 {

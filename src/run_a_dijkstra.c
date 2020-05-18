@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 t_list			*run_a_dijkstra(t_farm *farm)
 {

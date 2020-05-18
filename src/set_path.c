@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int				set_path(t_farm *farm, t_list *path,
 					int *arrived)

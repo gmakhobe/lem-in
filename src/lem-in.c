@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int		main(void)
 {
@@ -7,10 +7,10 @@ int		main(void)
 
 	if (analyze_map_data(&input, &farm) && 
         find_path(&farm))
-		print_result(input, farm.turns);
+		ft_print_out(input, farm.turns);
 	else
-		print_error();
-	ft_lstdel(&input, free_line);
-	free_farm(&farm);
+		ft_error();
+	ft_free_list(&input, ft_free);
+	ft_free_farm(&farm);
 	return (0);
 }

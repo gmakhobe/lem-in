@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 // it gets the name of the room/rooms
 t_room		*ft_room_name(t_list *rooms, char *name) // get_room_by_name

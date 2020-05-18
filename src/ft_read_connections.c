@@ -1,4 +1,4 @@
-#include "lem_in.h"
+#include "../includes/lem_in.h"
 
 int		ft_read_connections(t_list **input, t_farm *farm) //parse links
 {
