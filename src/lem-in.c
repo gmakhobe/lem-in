@@ -6,7 +6,7 @@ int		main(void)
 	t_farm	farm;
 
 	if (analyze_map_data(&input, &farm) && 
-        set_turns(&farm))
+        find_path(&farm))
 		print_result(input, farm.turns);
 	else
 		print_error();

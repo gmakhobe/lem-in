@@ -26,6 +26,7 @@ int			read_map(const int fd, char **data, char c)
 	}
 	return (0);
 }
+
 static int get_line_data(t_list **input, char *data)
 {
 	size_t line_size;
