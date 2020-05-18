@@ -6,7 +6,7 @@
 /*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 13:22:53 by samofoke          #+#    #+#             */
-/*   Updated: 2020/05/18 13:29:19 by samofoke         ###   ########.fr       */
+/*   Updated: 2020/05/18 13:33:37 by samofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	set_name(char *str, t_room *r)
 	return (1);
 }
 
-t_room		*resolve_room_info(char *str)
+t_room		*resolve_info(char *str)
 {
 	t_room	*r;
 
