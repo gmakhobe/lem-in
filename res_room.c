@@ -6,7 +6,7 @@
 /*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 23:10:24 by samofoke          #+#    #+#             */
-/*   Updated: 2020/05/17 23:33:50 by samofoke         ###   ########.fr       */
+/*   Updated: 2020/05/18 13:22:28 by samofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int			resolve_room(t_list **data, t_farm *f)
     if (is_link(*data))
         return (1);
 	if (!(*data) || !(r = resolve_info((char*)((*data)->content)))
-		|| !add_to_rooms(r, f) ||
+		|| !add_rooms(r, f) ||
 		(cmd == START_COMMAND && f->start) ||
 		(cmd == END_COMMAND && f->end))
 		return (0);
