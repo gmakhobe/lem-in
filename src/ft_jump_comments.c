@@ -1,4 +1,4 @@
-int		ft_jump_comments(t_list **input) //skip comments
+int		ft_jump_comments(t_list **input) //skip_comments
 {
     int check_comment;
 
