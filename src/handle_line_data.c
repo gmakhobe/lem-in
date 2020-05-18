@@ -14,9 +14,7 @@ int			read_map(const int fd, char **data, char c)
 	while ((result = read(fd, &buff, 1)) > 0)
 	{
 		if (buff == c)
-		{
 			return (1);
-		}
 		++size;
 		temp = *data;
 		*data = ft_strnew(size);
@@ -59,9 +57,7 @@ int handle_line_data(t_list **input)
 	while ((result = read_map(0, &data, '\n')) > 0)
 	{
 		if (get_line_data(input, data) == 0)
-		{
 			return (0);
-		}
 	}
 	if (data != NULL && get_line_data(input, data) == 0)
 		return (0);
