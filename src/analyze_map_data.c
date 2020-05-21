@@ -6,7 +6,7 @@
 /*   By: gmakhobe <gmakhobe@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 21:31:24 by gmakhobe          #+#    #+#             */
-/*   Updated: 2020/05/18 21:31:25 by gmakhobe         ###   ########.fr       */
+/*   Updated: 2020/05/21 11:21:25 by gmakhobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int analyze_map_data(t_list **input, t_farm *map)
 	if (!handle_line_data(input))
 		return (0);
 	data = *input;
+	if (!map || !data)
+		return 0;
 	if (!handle_ant_data(&data, map))
 		return (0);
 	if (!resolve_rooms(&data, map))
