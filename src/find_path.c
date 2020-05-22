@@ -6,7 +6,7 @@
 /*   By: gmakhobe <gmakhobe@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 21:31:45 by gmakhobe          #+#    #+#             */
-/*   Updated: 2020/05/18 21:31:47 by gmakhobe         ###   ########.fr       */
+/*   Updated: 2020/05/23 00:10:41 by samofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int     find_path(t_farm *farm)
         if (!set_path(farm, path, &i))
 			break ;
 	ft_lstdel(&path, NULL);
-    ft_putendl("Works");
     if (i == farm->n_ants)
 	    return (1);
     else
