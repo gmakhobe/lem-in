@@ -68,7 +68,9 @@ int handle_line_data(t_list **input)
 	data = NULL;
 	*input = NULL;
 	while ((result = read_map(0, &data, '\n')) > 0)
-	{
+	{	
+		if(!data)
+			break;
 		if (get_line_data(input, data) == 0)
 			return (0);
 	}
