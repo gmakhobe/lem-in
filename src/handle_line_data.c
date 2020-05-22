@@ -6,7 +6,7 @@
 /*   By: gmakhobe <gmakhobe@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 21:35:52 by gmakhobe          #+#    #+#             */
-/*   Updated: 2020/05/18 21:35:53 by gmakhobe         ###   ########.fr       */
+/*   Updated: 2020/05/21 11:22:36 by gmakhobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,9 @@ int handle_line_data(t_list **input)
 	data = NULL;
 	*input = NULL;
 	while ((result = read_map(0, &data, '\n')) > 0)
-	{
+	{	
+		if(!data)
+			break;
 		if (get_line_data(input, data) == 0)
 			return (0);
 	}
