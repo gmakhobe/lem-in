@@ -74,5 +74,5 @@ int handle_line_data(t_list **input)
 	}
 	if (data != NULL && get_line_data(input, data) == 0)
 		return (0);
-	return (1);
+	return (*input != NULL);
 }
